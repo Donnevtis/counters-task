@@ -1,5 +1,4 @@
 <script setup>
-import { defineEmits } from 'vue';
 import BaseRect from './BaseRect';
 import PlusIcon from './icons/PlusIcon';
 

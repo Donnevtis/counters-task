@@ -7,13 +7,22 @@ import StopButton from './StopButton.vue';
 const inactive = ref(true);
 const count = ref(0);
 
+const msToSec = (ms) => Math.round(ms / 1000);
+
 let intervalId;
+let start;
 
 const handlePlayPause = () => {
   inactive.value = !inactive.value;
 
   if (!inactive.value) {
-    intervalId = setInterval(() => count.value++, 1000);
+    start = msToSec(Date.now());
+    intervalId = setInterval(() => {
+      const now = msToSec(Date.now());
+      const shift = now - start;
+      count.value += shift;
+      start = now;
+    }, 500);
   } else {
     clearInterval(intervalId);
   }
@@ -23,6 +32,7 @@ const handleStop = () => {
   clearInterval(intervalId);
   inactive.value = true;
   count.value = 0;
+  start = undefined;
 };
 
 const time = computed(() => {

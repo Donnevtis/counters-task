@@ -1,29 +1,33 @@
-# timers-vue
+# Секундомеры
 
-## Project setup
+## Установить
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Скомпилировать для разработки
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Скомпилировать для продакшна
+
 ```
 npm run build
 ```
 
-### Run your unit tests
+### Запустить юнит тесты
+
 ```
 npm run test:unit
 ```
 
-### Lints and fixes files
+### Запустить линтер
+
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### [Открыть приложение](https://discreet-low.surge.sh)
